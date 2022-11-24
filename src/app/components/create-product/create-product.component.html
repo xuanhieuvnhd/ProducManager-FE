@@ -1,0 +1,36 @@
+
+<form class="form11" [formGroup]="form" (submit)="add()">
+  <div><br></div><h2 style="margin-left: 150px">Thêm sản phẩm mới</h2>
+  <input type="hidden" formControlName = "id">
+  <h5>Tên sản phẩm</h5>
+  <input type="text" placeholder="Nhập tên sản phẩm vào đây" formControlName = "name"><div><br></div>
+  <h5>Giá sản phẩm</h5>
+  <input type="text" placeholder="Nhập giá sản phẩm vào đây"formControlName = "price"><div><br></div>
+  <h5>Mô tả sản phẩm</h5>
+  <input type="text" placeholder="Nhập mô tả sản phẩm vào đây"formControlName = "description"><div><br></div>
+  <br>
+  <h6>Hãng sản xuất
+    <select style="width: 340px" formControlName = "brandId">
+      <option *ngFor="let brand of listBrand" [value]="brand.id">
+        {{brand.name}}
+      </option>
+    </select>
+  </h6>
+<br>
+  <button style="margin-left: 160px;background-color: green" class="col-lg-3">Tạo</button><div><br></div>
+  <button routerLink="" style="margin-left: 20px;background-color: #182aec;color: white" class="col-lg-3">Quay lại</button>
+</form>
+<style>
+  input{
+    margin-left: 20px;
+    width: 370px;
+  }
+  .form11{
+    background-color: cadetblue;
+    margin-left:400px;
+    margin-right: 500px;
+    margin-top: 30px;
+    border-radius: 8px;
+    border: 6px solid green;
+  }
+</style>

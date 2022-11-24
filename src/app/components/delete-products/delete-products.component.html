@@ -1,0 +1,30 @@
+
+<form class="form11" [formGroup]="products" (ngSubmit)="deletePost(id)">
+  <div><br></div><h2 style="margin-left: 150px">Delete</h2>
+  <input type="hidden" formControlName = "id">
+  <h5>Tên sản phẩm</h5>
+  <input type="text" formControlName = "name"><div><br></div>
+  <h5>Giá sản phẩm</h5>
+  <input type="text" formControlName = "price"><div><br></div>
+  <h5>Mô tả sản phẩm</h5>
+  <input type="text" formControlName = "description"><div><br></div>
+  <br>
+  <br>
+  <button style="margin-left: 100px;background-color: red;color: white" class="col-lg-3">Xóa</button>
+  <button routerLink="" style="margin-left: 20px;background-color: rgba(0,0,0,0.08);color: white" class="col-lg-3">Quay lại</button>
+  <div><br></div>
+</form>
+<style>
+  input{
+    margin-left: 20px;
+    width: 370px;
+  }
+  .form11{
+    background-color: cadetblue;
+    margin-left:400px;
+    margin-right: 500px;
+    margin-top: 30px;
+    border-radius: 8px;
+    border: 2px solid cornflowerblue;
+  }
+</style>

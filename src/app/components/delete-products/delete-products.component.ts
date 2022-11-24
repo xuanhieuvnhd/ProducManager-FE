@@ -1,0 +1,51 @@
+// @ts-ignore
+import {Component, OnInit} from '@angular/core';
+import {ProductService} from "../../services/product.service";
+import {Product} from "../../models/product";
+// @ts-ignore
+import {ActivatedRoute, ParamMap, Router} from "@angular/router";
+// @ts-ignore
+import {FormControl, FormGroup} from "@angular/forms";
+
+// @ts-ignore
+@Component({
+  selector: 'app-delete-products',
+  templateUrl: './delete-products.component.html',
+  styleUrls: ['./delete-products.component.css']
+})
+export class DeleteProductsComponent implements OnInit {
+  id: any;
+  products: any;
+
+
+  constructor(private productService: ProductService,
+              private router: Router,
+              private activateRoute: ActivatedRoute,) {
+    this.activateRoute.paramMap.subscribe((paramMap: ParamMap) => {
+      // @ts-ignore
+      this.id = +paramMap.get('id');
+      this.findById(this.id);
+    });
+  }
+
+  ngOnInit(): void {
+  }
+  deletePost(id: any) {
+    this.productService.delete(id).subscribe(() => {
+      this.router.navigate(['/']);
+      alert("Xoá thành công")
+    })
+  }
+  findById(id: any) {
+    this.productService.getById(id).subscribe((data: { name: any; price: any; description: any; brand: { id: any; }; }) => {
+      console.log(data)
+      // @ts-ignore
+      this.products = new FormGroup({
+        name: new FormControl(data.name),
+        price: new FormControl(data.price),
+        description: new FormControl(data.description),
+        brandId: new FormControl(data.brand.id),
+      });
+    });
+}
+}

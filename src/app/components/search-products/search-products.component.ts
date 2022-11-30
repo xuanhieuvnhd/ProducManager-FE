@@ -1,11 +1,8 @@
-// @ts-ignore
 import { Component, OnInit } from '@angular/core';
 import {Product} from "../../models/product";
-// @ts-ignore
 import {ActivatedRoute, ParamMap} from "@angular/router";
 import {ProductService} from "../../services/product.service";
 
-// @ts-ignore
 @Component({
   selector: 'app-search-products',
   templateUrl: './search-products.component.html',

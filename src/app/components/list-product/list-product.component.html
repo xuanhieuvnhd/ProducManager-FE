@@ -25,39 +25,20 @@
   <tr>
     <th scope="col">STT</th>
     <th scope="col">Tên sản phẩm</th>
+    <th scope="col">Hãng sản xuất</th>
     <th scope="col">Giá sản phẩm</th>
     <th scope="col">Mô tả sản phẩm</th>
-    <th scope="col">Hãng sản xuất</th>
-
   </tr>
   </thead>
   <tbody>
   <tr  *ngFor = "let item of list,let indexOfelement=index;">
     <th scope="row">{{indexOfelement+1}}</th>
     <td routerLink="search-product/{{item.id}}">{{item.name}}</td>
+    <td>{{item.brand.name}}</td>
     <td>{{item.price}}</td>
     <td>{{item.description}}</td>
-    <td>{{item.brand.name}}</td>
     <td><button class="button3" routerLink="delete-product/{{item.id}}">  xóa  </button></td>
     <td><button class="button2" routerLink="update-product/{{item.id}}">  sửa  </button></td>
   </tr>
   </tbody>
 </table>
-
-<style>
-  .button1 {
-    background-color: white;
-    color: black;
-    border: 2px solid gold;
-  }
-  .button2 {
-    background-color: white;
-    color: black;
-    border: 2px solid green;
-  }
-  .button3 {
-    background-color: white;
-    color: black;
-    border: 2px solid red;
-  }
-</style>

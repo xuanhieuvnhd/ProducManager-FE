@@ -1,13 +1,8 @@
-// @ts-ignore
 import {Component, OnInit} from '@angular/core';
 import {ProductService} from "../../services/product.service";
-import {Product} from "../../models/product";
-// @ts-ignore
 import {ActivatedRoute, ParamMap, Router} from "@angular/router";
-// @ts-ignore
 import {FormControl, FormGroup} from "@angular/forms";
 
-// @ts-ignore
 @Component({
   selector: 'app-delete-products',
   templateUrl: './delete-products.component.html',
@@ -39,7 +34,6 @@ export class DeleteProductsComponent implements OnInit {
   findById(id: any) {
     this.productService.getById(id).subscribe((data: { name: any; price: any; description: any; brand: { id: any; }; }) => {
       console.log(data)
-      // @ts-ignore
       this.products = new FormGroup({
         name: new FormControl(data.name),
         price: new FormControl(data.price),

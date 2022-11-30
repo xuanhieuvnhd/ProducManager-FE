@@ -1,6 +1,4 @@
-// @ts-ignore
 import { NgModule } from "@angular/core";
-// @ts-ignore
 import { RouterModule, Routes } from '@angular/router';
 import {ListProductComponent} from "./components/list-product/list-product.component";
 import {CreateProductComponent} from "./components/create-product/create-product.component";
@@ -17,7 +15,6 @@ const routes: Routes = [
   {path:"update-product/:id",component:EditProductComponent},
 ];
 
-// @ts-ignore
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

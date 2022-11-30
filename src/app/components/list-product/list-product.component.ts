@@ -1,11 +1,7 @@
-// @ts-ignore
 import {Component, OnInit} from '@angular/core';
-import {Product} from "../../models/product";
 import {ProductService} from "../../services/product.service";
-// @ts-ignore
 import {HttpClient} from "@angular/common/http";
 
-// @ts-ignore
 @Component({
   selector: 'app-list-product',
   templateUrl: './list-product.component.html',

@@ -1,14 +1,10 @@
-// @ts-ignore
 import { Component, OnInit } from '@angular/core';
 import {ProductService} from "../../services/product.service";
-// @ts-ignore
 import {ActivatedRoute, Router} from "@angular/router";
 import {BrandService} from "../../services/brand.service";
-// @ts-ignore
-import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {FormControl, FormGroup} from "@angular/forms";
 import {Brand} from "../../models/brand";
 
-// @ts-ignore
 @Component({
   selector: 'app-edit-product',
   templateUrl: './edit-product.component.html',

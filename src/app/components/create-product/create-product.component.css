@@ -1,0 +1,12 @@
+input{
+  margin-left: 20px;
+  width: 370px;
+}
+.form11{
+  background-color: cadetblue;
+  margin-left:400px;
+  margin-right: 500px;
+  margin-top: 30px;
+  border-radius: 8px;
+  border: 6px solid green;
+}

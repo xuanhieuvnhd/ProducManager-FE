@@ -47,11 +47,10 @@ export class CreateProductComponent implements OnInit {
 
     this.productService.save(this.obj).subscribe(()=>{
       alert('Tạo sản phẩm thành công');
+      this.form.reset();
       // @ts-ignore
     }, error => {
       alert('Không tạo được sản phẩm');
     })
   }
-
-
 }

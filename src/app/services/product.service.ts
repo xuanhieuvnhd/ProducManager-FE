@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Product} from "../models/product";
-import {FormControl, FormGroup, ɵFormGroupValue, ɵTypedOrUntyped, ɵValue} from "@angular/forms";
+
 
 
 @Injectable({
@@ -26,9 +26,9 @@ export class ProductService {
     return this.httpClient.get(this.API_URL + `/${id}`);
   }
 
-  // getByName(name :any):Observable<any>{
-  //   return this.httpClient.get(this.API_URL+`/search?name=`+`${name}`)
-  // }
+  getByName(name :any):Observable<any>{
+    return this.httpClient.get(this.API_URL+`/search?name=`+`${name}`)
+  }
 
   delete(id: number) {
     return this.httpClient.delete(this.API_URL + `/${id}`)

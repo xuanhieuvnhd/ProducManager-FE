@@ -1,6 +1,6 @@
 
 <form class="form11" [formGroup]="form" (submit)="save()">
-  <div><br></div><h2 style="margin-left: 150px">Update</h2>
+  <div><br></div><h2 style="margin-left: 150px">Cập nhật</h2>
   <input type="hidden" formControlName = "id">
   <h5>Tên sản phẩm</h5>
   <input type="text" formControlName = "name"><div><br></div>
@@ -19,6 +19,7 @@
 
   <br>
   <button style="margin-left: 160px;background-color: goldenrod" class="col-lg-3">Sửa</button>
+  <button routerLink="" style="margin-left: 20px;background-color: rgba(0,0,0,0.08);color: white" class="col-lg-3">Quay lại</button>
   <div><br></div>
 </form>
 <style>

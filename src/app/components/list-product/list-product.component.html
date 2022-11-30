@@ -27,8 +27,8 @@
     <th scope="col">Tên sản phẩm</th>
     <th scope="col">Giá sản phẩm</th>
     <th scope="col">Mô tả sản phẩm</th>
-    <th scope="col">Hành động</th>
-    <th scope="col">Hành động</th>
+<!--    <th scope="col">Hành động</th>-->
+<!--    <th scope="col">Hành động</th>-->
   </tr>
   </thead>
   <tbody>
@@ -37,7 +37,7 @@
     <td routerLink="search-product/{{item.id}}">{{item.name}}</td>
     <td>{{item.price}}</td>
     <td>{{item.description}}</td>
-<!--    <td><button class="button1" routerLink="search-product/{{item.id}}">chi tiết</button></td>-->
+    <td><button class="button1" routerLink="search-product/{{item.id}}">chi tiết</button></td>
     <td><button class="button3" routerLink="delete-product/{{item.id}}">  xóa  </button></td>
     <td><button class="button2" routerLink="update-product/{{item.id}}">  sửa  </button></td>
   </tr>
